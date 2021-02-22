@@ -12,6 +12,10 @@ public class Counter {
     }
 
     public void setCount(int count) {
-            this.count += count;
+            this.count = count;
+    }
+
+    public void addPlusOne() {
+        count++;
     }
 }
