@@ -9,7 +9,7 @@ public class Runnables implements Runnable {
 
     @Override
     public void run() {
-        for (int j = 0; j<100; j++) {
+        for (int j = 0; j < 100; j++) {
             counter.setCount(1);
             System.out.println("Thread-1: counter is " + counter.getCount());
         }
