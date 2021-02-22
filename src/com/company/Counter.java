@@ -1,17 +1,17 @@
 package com.company;
 
 public class Counter {
-    private static int count;
+    private int count;
 
     public Counter() {
         count = 0;
     }
 
-    public static int getCount() {
+    public int getCount() {
         return count;
     }
 
-    public static void setCount(int count) {
-        Counter.count += count;
+    public void setCount(int count) {
+            this.count += count;
     }
 }
