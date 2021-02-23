@@ -3,7 +3,7 @@ package com.company;
 import org.apache.log4j.Logger;
 
 public class Threads extends Thread {
-    public final Counter counter;
+    private final Counter counter;
     private static final Logger logger = Logger.getLogger(Threads.class);
 
     public Threads(Counter counter) {
@@ -14,7 +14,7 @@ public class Threads extends Thread {
     public void run() {
         logger.info("Thread-0 is running!");
         while (counter.getCount() < 100) {
-            logger.info("Thread-0: counter is " +  counter.addOne());
+            logger.info("Thread-0: counter is " +  counter.increment());
         }
         logger.info("Thread-0 is over");
     }

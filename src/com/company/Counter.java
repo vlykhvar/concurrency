@@ -15,7 +15,7 @@ public class Counter {
             this.count = count;
     }
 
-    public int addOne() {
+    public int increment() {
         count++;
         return count;
     }
