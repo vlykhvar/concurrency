@@ -14,8 +14,7 @@ public class Threads extends Thread {
     public void run() {
         logger.info("Thread-0 is running!");
         for (int j = 0; j < 100; j++) {
-            counter.addPlusOne();
-            logger.info("Thread-0: counter is " + counter.getCount());
+            logger.info("Thread-0: counter is " +  counter.addPlusOne());
         }
         logger.info("Thread-0 is over");
     }

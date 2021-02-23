@@ -14,8 +14,7 @@ public class Runnables implements Runnable {
     public void run() {
         logger.info("Thread-1 is running!");
         for (int j = 0; j < 100; j++) {
-            counter.addPlusOne();
-            logger.info("Thread-1: counter is " + counter.getCount());
+            logger.info("Thread-1: counter is " +  counter.addPlusOne());
         }
         logger.info("Thread-1 is over!");
     }
