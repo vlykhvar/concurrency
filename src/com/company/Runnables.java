@@ -13,8 +13,8 @@ public class Runnables implements Runnable {
     @Override
     public void run() {
         logger.info("Thread-1 is running!");
-        for (int j = 0; j < 100; j++) {
-            logger.info("Thread-1: counter is " +  counter.addPlusOne());
+        while (counter.getCount() < 100) {
+            logger.info("Thread-1: counter is " +  counter.addOne());
         }
         logger.info("Thread-1 is over!");
     }
