@@ -8,19 +8,15 @@ public class CreateList {
     private List<Integer> list;
     private int number;
 
-
     public CreateList() {
         this.list = new ArrayList<>();
     }
-
 
     public CreateList(int number) {
         this.list = new ArrayList<>();
         this.number = number;
         createList(number);
     }
-
-
 
     public List<Integer> createList() {
         while (list.size() < LIST_SIZE) {
@@ -35,6 +31,4 @@ public class CreateList {
         }
         return list;
     }
-
-
 }
