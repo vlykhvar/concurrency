@@ -26,11 +26,11 @@ class TaskTest {
     }
 
     @Test
-    public void getSumJoin_ok() {
+    public void getSumJoin_ok() throws Exception {
         setList(1);
-        Assertions.assertEquals(1_000_000, join.execure());
+        Assertions.assertEquals(1_000_000, join.call());
         setList(2);
-        Assertions.assertEquals(2_000_000, join.execure());
+        Assertions.assertEquals(2_000_000, join.call());
     }
 
     public void setList(int number) {
