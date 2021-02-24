@@ -1,35 +1,28 @@
 package com.company.hw2;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class CallableCustomTest {
-    private static List<Integer> list;
     private static CallableCustom callableCustom;
+    private Recursive recursive;
+    private CreateList createList;
 
-    @Test
-    public void call() {
-        try {
-            initializeList(1);
-            Assertions.assertEquals(1_000_000, callableCustom.call());
-            initializeList(2);
-            Assertions.assertEquals(2_000_000, callableCustom.call());
-            initializeList(-2);
-            Assertions.assertEquals(-2_000_000, callableCustom.call());
-        } catch (Exception e)
-        {
-            throw new RuntimeException("Try again");
-        }
+    @Before
+    public void setUp(){
+        createList = new CreateList();
     }
 
-    public void initializeList(int number) {
-        list = new ArrayList<>();
-        while (list.size() <= 999_999) {
-            list.add(number);
-        }
-        callableCustom = new CallableCustom(list);
+    @Test
+    public void compute() {
+        callableCustom = new CallableCustom(createList.createList(1));
+        Assertions.assertEquals(1_000_000, recursive.compute());
+        setUp();
+        callableCustom = new CallableCustom(createList.createList(2));
+        Assertions.assertEquals(2_000_000, recursive.compute());
+        setUp();
+        callableCustom = new CallableCustom(createList.createList(-2));
+        Assertions.assertEquals(-2_000_000, recursive.compute());
     }
 }
