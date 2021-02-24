@@ -7,11 +7,11 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ForkJoinTask;
 import java.util.stream.Collectors;
 
-public class Join implements Callable<Integer> {
+public class CallableCustom implements Callable<Integer> {
     private List<Integer> list;
     private static final int THREADS = Runtime.getRuntime().availableProcessors();
 
-    public Join(List<Integer> list) {
+    public CallableCustom(List<Integer> list) {
         this.list = list;
     }
 
