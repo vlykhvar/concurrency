@@ -1,6 +1,5 @@
 package test.com.company.hw2;
 
-import com.company.hw2.CallableCustom;
 import com.company.hw2.CreateList;
 import com.company.hw2.ExecutorServiceCustom;
 import org.junit.Before;
@@ -13,7 +12,7 @@ public class CallableCustomTest {
 
 
     @Before
-    public void setUp(){
+    public void setUp() {
         createList = new CreateList();
         executor = new ExecutorServiceCustom();
     }
