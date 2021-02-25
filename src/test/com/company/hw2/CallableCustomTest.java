@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Assertions;
 
 public class CallableCustomTest {
     private CreateList createList;
-    ExecutorServiceCustom executor;
+    private ExecutorServiceCustom executor;
 
 
     @Before
