@@ -15,7 +15,7 @@ public class Recursive extends RecursiveTask<Integer> {
     }
 
     @Override
-    protected Integer compute() {
+    public Integer compute() {
         if (list.size() > THRESHOLD) {
             return ForkJoinTask.invokeAll(createSubtasks())
                     .stream()
